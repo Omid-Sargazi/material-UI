@@ -6,7 +6,17 @@ import InfoIcon from '@mui/icons-material/Info';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import ButtonGroup from '@mui/material/ButtonGroup';
+import {ToggleButtonGroup,ToggleButton } from '@mui/material';
+import FormatBoldIcon from '@mui/icons-material/FormatBold';
+import FormatItalicIcon from '@mui/icons-material/FormatItalic';
+import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
+import {useState} from "react";
 export const MuiButton = ()=>{
+    const [format, setFormat] = useState<string | null>(null);
+    const handleFormatChange = (_event:React.MouseEvent<HTMLElement>,updatedFormats:string|null)=>{
+        setFormat(updatedFormats)
+    }
+    console.log(format)
     return (
    <Stack spacing={4}>
 
@@ -44,6 +54,14 @@ export const MuiButton = ()=>{
         <Button>Center</Button>
         <Button>Right</Button>
        </ButtonGroup>
+    </Stack>
+    <Stack direction="row">
+        <ToggleButtonGroup exclusive size="small" color="warning" value={format} aria-label="text formatting" onChange={handleFormatChange}>
+        <ToggleButton aria-label="bold" value="bold"><FormatBoldIcon/></ToggleButton>
+        <ToggleButton aria-label="italic" value="italic"><FormatItalicIcon/></ToggleButton>
+        <ToggleButton aria-label="underlined" value="underlined"><FormatUnderlinedIcon/></ToggleButton>
+        </ToggleButtonGroup>
+
     </Stack>
    </Stack>
     )
