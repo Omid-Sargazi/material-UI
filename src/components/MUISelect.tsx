@@ -2,16 +2,20 @@ import { Box, TextField, MenuItem } from '@mui/material';
 import {useState} from "react";
 
 export const MUISelect = ()=>{
-    const [country, setCountry] = useState("");
-    console.log(country)
+    const [countries, setCountries] = useState<string[]>([]);
+    console.log(countries)
+    const handleChange = (event:React.ChangeEvent<HTMLInputElement>)=>{
+        const value = event.target.value
+        setCountries(typeof value ==="string"? value.split(","):value);
+    }
     return (
         <Box width="150px" >
-            <TextField fullWidth  label="Select country" select value={country} helperText={country} onChange={(e)=>setCountry(e.target.value)}>
-                <MenuItem value="USA">USA</MenuItem>
-                <MenuItem value="Turkey">Turkey</MenuItem>
-                <MenuItem value="Poland">Poland</MenuItem>
-                <MenuItem value="Israel">Israel</MenuItem>
-                <MenuItem value="Canada">Canada</MenuItem>
+            <TextField size="small" color="secondary" SelectProps={{multiple:true}} fullWidth  label="Select country" select value={countries} helperText={countries} onChange={handleChange}>
+                <MenuItem value="US">USA</MenuItem>
+                <MenuItem value="Tu">Turkey</MenuItem>
+                <MenuItem value="Po">Poland</MenuItem>
+                <MenuItem value="Is">Israel</MenuItem>
+                <MenuItem value="Ca">Canada</MenuItem>
             </TextField>
         </Box>
     )
