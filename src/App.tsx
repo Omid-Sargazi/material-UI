@@ -5,6 +5,7 @@ import {MuiTypography} from "./components/muiTypography";
 import {MuiButton} from "./components/MuiButton";
 import {MuiTextField} from "./components/MuiTextField";
 import {MUISelect} from "./components/MUISelect";
+import RadioButton from './components/RadioButton';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
      <h1>Select Components</h1>
      <hr/>
      <MUISelect/>
+     <hr/><br/>
+     <RadioButton/>
     </div>
   );
 }
