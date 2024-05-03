@@ -6,6 +6,7 @@ import {MuiButton} from "./components/MuiButton";
 import {MuiTextField} from "./components/MuiTextField";
 import {MUISelect} from "./components/MUISelect";
 import RadioButton from './components/RadioButton';
+import CheckBox from './components/CheckBox';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
      <MUISelect/>
      <hr/><br/>
      <RadioButton/>
+     <hr/><br/>
+     <h1>CheckBox</h1>
+     <CheckBox/>
     </div>
   );
 }
