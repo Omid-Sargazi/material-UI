@@ -6,6 +6,7 @@ import ButtonGroup from './components/newcomponents/buttonGroup';
 import ToggleButtonMUI from './components/newcomponents/ToggleButtonMUI';
 import TextFieldMUI from './components/newcomponents/TextField';
 import UseState from './components/UseState/UseState';
+import UseReducer from './components/UseReducer/UseReducer';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
      {/* <ButtonGroup/> */}
      {/* <ToggleButtonMUI/> */}
      {/* <TextFieldMUI/> */}
-     <UseState/>
+     {/* <UseState/> */}
+     <UseReducer/>
     </div>
   );
 }
