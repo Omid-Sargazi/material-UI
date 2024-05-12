@@ -7,6 +7,7 @@ import ToggleButtonMUI from './components/newcomponents/ToggleButtonMUI';
 import TextFieldMUI from './components/newcomponents/TextField';
 import UseState from './components/UseState/UseState';
 import UseReducer from './components/UseReducer/UseReducer';
+import MouseCountainer from './components/useEffect/MouseCountainer';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
      {/* <ToggleButtonMUI/> */}
      {/* <TextFieldMUI/> */}
      {/* <UseState/> */}
-     <UseReducer/>
+     {/* <UseReducer/> */}
+     <MouseCountainer/>
     </div>
   );
 }
