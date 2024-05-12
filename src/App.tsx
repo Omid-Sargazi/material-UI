@@ -8,6 +8,7 @@ import TextFieldMUI from './components/newcomponents/TextField';
 import UseState from './components/UseState/UseState';
 import UseReducer from './components/UseReducer/UseReducer';
 import MouseCountainer from './components/useEffect/MouseCountainer';
+import DataFetching from './components/DataFetching/DataFetching';
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
      {/* <TextFieldMUI/> */}
      {/* <UseState/> */}
      {/* <UseReducer/> */}
-     <MouseCountainer/>
+     {/* <MouseCountainer/> */}
+     <DataFetching/>
     </div>
   );
 }
